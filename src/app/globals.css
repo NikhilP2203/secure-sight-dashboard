@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background-color: #121212; /* Dark Blackish Background */
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+
+/* Navbar gradient */
+nav {
+  background: linear-gradient(90deg, #111 0%, #222 50%, #1a1a1a 100%);
+  border-bottom: 1px solid #333;
+}
+
+/* Gradient nav text */
+.nav-link {
+  background: linear-gradient(to right, #FFD700, #FFAA00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+/* Incident List */
+.incident-header {
+  color: #FF3B30;
+}
+
+/* Cards */
+.incident-card {
+  background-color: #1E1E1E;
+  border: 1px solid #333;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.incident-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.3);
+}
+
+/* Resolve Button */
+.resolve-btn {
+  color: #FFD700;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+.resolve-btn:hover {
+  color: #FFAA00;
+}
